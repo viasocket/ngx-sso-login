@@ -25,7 +25,7 @@ import { SsoModule } from 'ngx-sso-login';
   declarations: [
   ],
   imports: [
-    AvatarModule
+    SsoModule
   ],
   providers: [],
   bootstrap: []
@@ -37,10 +37,6 @@ export class AppModule { }
 
 Once the SsoModule is imported, you can start using the component in your Angular application:
 
-```html
-<ngx-sso-btn [config]="SSO_CONFIG"></ngx-sso-btn>
-```
-
 ## Options
 ```typescript
 import { ISsoOptions } from 'ngx-sso-login';
@@ -51,7 +47,12 @@ const SSO_CONFIG: ISsoOptions = {
 }
 ```
 
+```html
+<ngx-sso-btn [config]="SSO_CONFIG"></ngx-sso-btn>
+```
+
 ## Release Notes & History
+* 1.0.3 : Readme Updated
 * 1.0 : Package published
 
 ## License
