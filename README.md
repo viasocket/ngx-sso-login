@@ -19,7 +19,7 @@ Once you have installed ngx-sso-login, you can import it in your `AppModule`:
 
 ```typescript
 // Import your AvatarModule
-import { SsoModule } from 'ngx-avatar';
+import { SsoModule } from 'ngx-sso-login';
 
 @NgModule({
   declarations: [
