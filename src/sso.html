@@ -1,0 +1,23 @@
+<ng-container *ngIf="drawBtnUi">
+  <ng-container *ngIf="config && config.view && config.view === 'list' then linkView else buttonView"></ng-container>
+</ng-container>
+
+<ng-container *ngIf="!drawBtnUi">
+  <p>Config is missing</p>
+</ng-container>
+
+
+<!-- button template -->
+<ng-template #buttonView>
+  <div id="__customBtn" (click)="login()">
+    <div class="__btnWrapper">
+      <span class="__icon"><img src="https://viasocket.com/app/favicon.png" width="30px" height="30px"style="padding:2px;"></span>
+      <span class="__buttonText">{{btnTxt}}</span>
+    </div>
+  </div>
+</ng-template>
+
+<!-- link template -->
+<ng-template #linkView>
+  <a href="javascript:void(0)" (click)="login()">{{btnTxt}}</a>
+</ng-template>
